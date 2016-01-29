@@ -2,15 +2,19 @@
 Data Science Specialization
 Getting and Cleaning Data Course Project CodeBook
 Version 1.0
-==============================================================================
+
 coursera.rsa@gmail.com
 Project CodeBook: Summary explanation of the project relevant input and output data
 
-Input Data: Smartlab “UCI HAR Dataset” used in this project consists of a collection of text (.txt) files that are contextually described within the datasets included “README” and “features_info” documents.  The information provided below was derived either directly or indirectly from those materials, including direct quotes.  
+Input Data Source
+==============================================================================
+Smartlab “UCI HAR Dataset” used in this project consists of a collection of text (.txt) files that are contextually described within the datasets included “README” and “features_info” documents.  The information provided below was derived either directly or indirectly from those materials, including direct quotes.  
 
 Smartlab Abstract: Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
 http://archive.ics.uci.edu/ml/datasets/
 Human+Activity+Recognition+Using+Smartphones”
+
+Input Data Analysis
 ==============================================================================
 
 A. “- 'train/X_train.txt': Training set” and “- 'test/X_test.txt': Test set”
@@ -45,6 +49,8 @@ Data transformation and output, as defined by the project assignment:
      4.Appropriately labels the data set with descriptive variable names. 
      5.From the data set in step 4, creates a second, independent tidy data set with the average of each 
      variable for each activity and each subject.
+
+Output: Tidydataset.txt (per project requirement #5)
 ==============================================================================
 
 Output: Tidydataset.txt (per project requirement #5)
@@ -103,5 +109,5 @@ Tidydataset Column Names Listing
 [81] "fBodyBodyGyroJerkMag-meanFreq()"      "angle(tBodyAccMean,gravity)"         
 [83] "angle(tBodyAccJerkMean),gravityMean)" "angle(tBodyGyroMean,gravityMean)"    
 [85] "angle(tBodyGyroJerkMean,gravityMean)" "angle(X,gravityMean)"                
-[87] "angle(Y,gravityMean)"                 "angle(Z,gravityMean)"
-
+[87] "angle(Y,gravityMean)"                 "angle(Z,gravityMean)"                
+> 
