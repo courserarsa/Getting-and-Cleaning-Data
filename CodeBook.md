@@ -1,5 +1,6 @@
 ==============================================================================
 Data Science Specialization
+==============================================================================
 Getting and Cleaning Data Course Project
 ==============================================================================
 Project CodeBook
@@ -38,7 +39,7 @@ E. “- 'activity_labels.txt': Links the class labels with their activity name.”
 * Integer activity ids with corresponding descriptions:  1 WALKING; 2 WALKING_UPSTAIRS; 3 WALKING_DOWNSTAIRS; 4 SITTING; 5 STANDING; 6 LAYING
 * These six activity ids align with the labels files described in “D”. 
 
-Data requirements for the project assigned:
+Data requirements for the project
 ==============================================================================
   Create one R script called run_analysis.R that does the following. 
      1.Merges the training and the test sets to create one data set.
@@ -59,9 +60,9 @@ C2 - "subjectid" [integer]
 * Definition: Identifier for the subjects performing the activities measured. 
 * Values:  See item “C” under Inputs section above
 
-C3:C88 – [numeric]
+C3:C88 – Column Names listed below [numeric]
 * Definition: Average of each mean and standard deviation ‘feature’ for each activity and each subject, as a subset of item “C” under Inputs section above
-* Values:  See included Column Names listed below
+* Values:  Calculated numeric mean per activity/subject
 
 Column Names
 [1]	"activity"  				[2]	"subjectid"
