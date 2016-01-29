@@ -11,8 +11,7 @@ Input Data Source: Smartlab “UCI HAR Dataset”
 The Smartlab data used for this project consists of a collection of text (.txt) files that are contextually described within the dataset's “README” and “features_info” documents.  The information provided below was derived either directly or indirectly from those materials, including many direct quotes.  
 
 Smartlab's "Abstract: Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
-http://archive.ics.uci.edu/ml/datasets/
-Human+Activity+Recognition+Using+Smartphones”
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones”
 
 Input Data Analysis
 ==============================================================================
@@ -39,26 +38,27 @@ E. “- 'activity_labels.txt': Links the class labels with their activity name.”
 * Integer activity ids with corresponding descriptions:  1 WALKING; 2 WALKING_UPSTAIRS; 3 WALKING_DOWNSTAIRS; 4 SITTING; 5 STANDING; 6 LAYING
 * These six activity ids align with the labels files described in “D”. 
 
-Data transformation and output requirements for the project assigned:
+Data requirements for the project assigned:
 ==============================================================================
   Create one R script called run_analysis.R that does the following. 
      1.Merges the training and the test sets to create one data set.
      2.Extracts only the measurements on the mean and standard deviation for each measurement. 
      3.Uses descriptive activity names to name the activities in the data set
      4.Appropriately labels the data set with descriptive variable names. 
-     5.From the data set in step 4, creates a second, independent tidy data set with the average of each 
-     variable for each activity and each subject.
+     5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Output File: Tidydataset.txt 
 ==============================================================================
 180 observations (30 subjects x 6 activities) of 88 variables (activity, subject and the 86 average mean/standard deviation measures for each)
 
 C1 –  “activity” [character]
-*  Definition:  Description of the activities performed by a subject when the raw movement   measurements were captured. 
+* Definition:  Description of the activities performed by a subject when the raw movement   measurements were captured. 
 * Values:  See item “E” under Inputs section above
+
 C2 - "subjectid" [integer]
 * Definition: Identifier for the subjects performing the activities measured. 
 * Values:  See item “C” under Inputs section above
+
 C3:C88 – [numeric]
 * Definition: Average of each mean and standard deviation ‘feature’ for each activity and each subject, as a subset of item “C” under Inputs section above
 * Values:  See included Column Names listed below
