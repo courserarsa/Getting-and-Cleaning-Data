@@ -52,20 +52,19 @@ Output File: Tidydataset.txt
 ==============================================================================
 180 observations (30 subjects x 6 activities) of 88 variables (activity, subject and the 86 average mean/standard deviation measures for each)
 
-C1 –  “activity” [character]
+[1] –  “activity” [character]
 * Definition:  Description of the activities performed by a subject when the raw movement   measurements were captured. 
 * Values:  See item “E” under Inputs section above
 
-C2 - "subjectid" [integer]
+[2] - "subjectid" [integer]
 * Definition: Identifier for the subjects performing the activities measured. 
 * Values:  See item “C” under Inputs section above
 
-C3:C88 – Column Names listed below [numeric]
+[3:88] – Column Names listed below [numeric]
 * Definition: Average of each mean and standard deviation ‘feature’ for each activity and each subject, as a subset of item “C” under Inputs section above
 * Values:  Calculated numeric mean per activity/subject
 
-Column Names - 
-[1]	"activity"  				[2]	"subjectid"
+Column Names [3:88] - 
 [3]	"tBodyAcc-mean()-X"			[4]	"tBodyAcc-mean()-Y"
 [5]	"tBodyAcc-mean()-Z"			[6]	"tBodyAcc-std()-X"
 [7]	"tBodyAcc-std()-Y"			[8]	"tBodyAcc-std()-Z"
