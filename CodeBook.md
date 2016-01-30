@@ -5,7 +5,6 @@ Getting and Cleaning Data Course Project
 ==============================================================================
 Project CodeBook - 
 Summary explanation of the project relevant input and output data
-coursera.rsa@gmail.com
 
 Input Data Source: Smartlab “UCI HAR Dataset” 
 ==============================================================================
