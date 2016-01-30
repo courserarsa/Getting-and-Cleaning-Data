@@ -3,14 +3,26 @@
 ##
 run_analysis <- function() {
 
-##  Download and stage project files    
-if(!file.exists("./data")){dir.create("./data")}
+##  Download and/or stage project files if not already available in the 
+##  working directory   
+if(file.exists("UCI HAR Dataset")) {  
+    filepath <- "./UCI HAR Dataset/"
+} else {
+    
+if (file.exists("getdata-projectfiles-UCI HAR Dataset")) {
+    if(!file.exists("./data")) {dir.create("./data")}
+        unzip("getdata-projectfiles-UCI HAR Dataset",exdir="./data")
+        filepath <- "./data/UCI HAR Dataset/"
+} else {
+
+if(!file.exists("./data")) {dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles
 %2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl,destfile="./data/getdata-projectfiles-UCI HAR Dataset",
     method="auto",quiet=TRUE)
 unzip("./data/getdata-projectfiles-UCI HAR Dataset",exdir="./data")
 filepath <- "./data/UCI HAR Dataset/"
+}}
     
 ##  Load required libraries
     library(data.table)
@@ -48,8 +60,8 @@ filepath <- "./data/UCI HAR Dataset/"
     testdata <- testdata %>% separate(measure, feature$feature, 
                             sep = "  | ", remove=TRUE)
 
-##  1.c Merge numeric feature/measurement variables with matching subject 
-##  and activity identifiers and then combine test/train rows
+##  1.c Convert to numeric and then merge feature/measurement variables with  
+##  matching subject and activity identifiers, then combine the test/train rows
     for (i in 1:561) {
         traindata[,i] <- as.numeric(as.character(traindata[,i]))}
     for (i in 1:561) {
@@ -73,7 +85,7 @@ filepath <- "./data/UCI HAR Dataset/"
             mutate(activity)
     
 ##  4.Appropriately label the data set with descriptive variable names
-##  4.a Drop temporary columns
+##  4.a Reorder columms and drop temporary ones
     mergeddata <- mergeddata[,c(1,2,3,90,4:89)]
     mergeddata <- select(mergeddata, -datagroup, -activityid)
 
