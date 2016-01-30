@@ -1,13 +1,9 @@
 ==============================================================================
-Data Science Specialization
-
-Getting and Cleaning Data Course Project
-
-
-
+Data Science Specialization: Getting and Cleaning Data Course Project
+==============================================================================
 "run_analysis.R
 
-" 
+"
 ==============================================================================
 
 Input Data: (sourced via one of the following) -  
